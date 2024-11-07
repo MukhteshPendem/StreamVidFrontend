@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #f5f5f5;
+    background-color: #1c1c1e; /* Dark theme for a cinematic feel */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #f5a623; /* Vibrant anime-style color */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.input {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #f5a623;
+    margin-bottom: 15px;
+    background-color: #2c2c2e;
+    color: #f5f5f5;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #ff7f50; /* Accent color on focus */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #ff7f50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+}
+
+.error {
+    color: #ff4c4c; /* Error message color */
+    margin-top: 10px;
+}
+
+.videoContainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videoContainer h3 {
+    color: #f5a623;
+    text-shadow: 2px 2px 4px #000;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}

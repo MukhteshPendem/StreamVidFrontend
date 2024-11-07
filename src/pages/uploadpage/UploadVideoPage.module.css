@@ -1,0 +1,99 @@
+/* Set a dark, vivid background with a mist-like gradient */
+body {
+    background: linear-gradient(145deg, #1b1e2b, #2a2f3d);
+    color: #f4f4f9;
+    font-family: 'Noto Sans JP', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly transparent dark layer */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 400px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+h2 {
+    color: #e53d2e; /* A bold red color */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Custom button-styled label for file upload */
+.customFileUpload {
+    background-color: #e53d2e;
+    color: #f4f4f9;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.customFileUpload:hover {
+    background-color: #c03228;
+}
+
+/* Hide default file input */
+.hiddenInput {
+    display: none;
+}
+
+/* Input styling for text fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #6b8ab1;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f4f4f9;
+    border-radius: 8px;
+    font-family: 'Noto Sans JP', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #e53d2e;
+}
+
+/* Button styling */
+button {
+    background-color: #e53d2e;
+    border: none;
+    color: #f4f4f9;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #c03228;
+}
+
+/* Styling for the message */
+p {
+    color: #7ea9e1;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+.fileName {
+    color: #7ea9e1;
+    margin-top: 10px;
+    font-style: italic;
+}
