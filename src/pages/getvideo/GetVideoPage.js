@@ -13,11 +13,14 @@ const GetVideoPage = () => {
             if (response.data.url) {
                 setVideoUrl(response.data.url);
                 setError('');
+                setTitle('')
             } else {
                 setError('Video not found');
             }
         } catch (error) {
+            console.log(`${process.env.BACKEND_URL}`);
             setError('Failed to fetch video: ' + error.message);
+
         }
     };
 

@@ -1,4 +1,4 @@
-/* Set a dark, vivid background with a mist-like gradient */
+
 body {
     background: linear-gradient(145deg, #1b1e2b, #2a2f3d);
     color: #f4f4f9;
@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.08); /* Slightly transparent dark layer */
+    background-color: rgba(255, 255, 255, 0.08);
     padding: 20px;
     border-radius: 15px;
     max-width: 400px;
@@ -20,12 +20,11 @@ body {
 }
 
 h2 {
-    color: #e53d2e; /* A bold red color */
+    color: #e53d2e;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
-/* Custom button-styled label for file upload */
 .customFileUpload {
     background-color: #e53d2e;
     color: #f4f4f9;
@@ -43,12 +42,11 @@ h2 {
     background-color: #c03228;
 }
 
-/* Hide default file input */
+
 .hiddenInput {
     display: none;
 }
 
-/* Input styling for text fields */
 input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -66,7 +64,7 @@ input[type="text"]:focus {
     border-color: #e53d2e;
 }
 
-/* Button styling */
+
 button {
     background-color: #e53d2e;
     border: none;
@@ -85,7 +83,7 @@ button:hover {
     background-color: #c03228;
 }
 
-/* Styling for the message */
+
 p {
     color: #7ea9e1;
     text-align: center;
@@ -96,4 +94,27 @@ p {
     color: #7ea9e1;
     margin-top: 10px;
     font-style: italic;
+}
+
+
+
+.loadingSpinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

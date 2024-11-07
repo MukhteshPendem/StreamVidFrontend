@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './UploadVideoPage.module.css';
+import Loader from "../../utils/Loader";
 
 const UploadVideoPage = () => {
     const [file, setFile] = useState(null);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [message, setMessage] = useState('');
+    const [isUploading, setIsUploading] = useState(false);
 
     const handleFileChange = (e) => {
         setFile(e.target.files[0]);
@@ -23,16 +25,26 @@ const UploadVideoPage = () => {
         formData.append('title', title);
         formData.append('description', description);
 
+        setIsUploading(true);
+
         try {
-            const response = await axios.post('http://localhost:8082/api/videos/upload', formData, {
+            const response = await axios.post(`http://localhost:8082/api/videos/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
             });
             setMessage('Video uploaded successfully! URL: ' + response.data);
+
+            setFile(null);
+            setTitle('');
+            setDescription('');
         } catch (error) {
             setMessage('Upload failed: ' + error.message);
+        } finally {
+            setIsUploading(false);
         }
+
+        setTimeout(() => setMessage(''), 10000);
     };
 
     return (
@@ -67,7 +79,20 @@ const UploadVideoPage = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 required={true}
             />
-            <button onClick={handleUpload}>Upload</button>
+            <button onClick={handleUpload} disabled={isUploading}>Upload</button>
+
+
+            {isUploading && (
+                <div
+                    style={{
+                        width: "100px",
+                        margin: "auto",
+                    }}
+                >
+                    <Loader/>
+                </div>
+            )}
+
             {message && <p>{message}</p>}
         </div>
     );
